@@ -1,4 +1,4 @@
-package azure_devops_webhook_handler
+package main
 
 import (
 	"context"
@@ -185,6 +185,6 @@ func StrAddr(b string) *string {
 }
 
 func main() {
-	http.HandleFunc("/event", HandleEvent)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	http.HandleFunc("/api/diggerdemo", HandleEvent)
+	log.Fatal(http.ListenAndServe(":80", nil))
 }
