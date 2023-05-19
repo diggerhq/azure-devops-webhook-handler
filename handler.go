@@ -185,6 +185,6 @@ func StrAddr(b string) *string {
 }
 
 func main() {
-	http.HandleFunc("/api/diggerdemo", HandleEvent)
+	http.HandleFunc("/api/events", HandleEvent)
 	log.Fatal(http.ListenAndServe(":80", nil))
 }
